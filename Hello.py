@@ -1,11 +1,13 @@
-def get_vowels(String):
-    return [each for each in String if each in "aeiou"]
-get_vowels("animal") # [a, i, a]
-get_vowels("sky") # []
-get_vowels("football") # [o, o, a]
+# Список участников
+participants = ['Артемий', 'Борис', 'Влад', 'Гоша', 'Дима', 'Евгений', 'Женя', 'Захар']
 
-def check_duplicate(lst):
-    return len(lst) != len(set(lst))
-check_duplicate([1,2,3,4,5,4,6]) # True
-check_duplicate([1,2,3]) # False
-check_duplicate([1,2,3,4,9]) # False
+# Создаём пустой список для участников первого дня
+first_day = []
+
+# Проходим по всем индексам списка
+for i in range(len(participants)):
+    if i % 2 == 0:  # Проверяем, чётный ли индекс
+        first_day.append(participants[i])
+
+# Вывод результата
+print("Первый день:", first_day)
